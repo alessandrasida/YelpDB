@@ -1,4 +1,4 @@
-package it.polito.tdp.yelp.model;
+ package it.polito.tdp.yelp.model;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,8 +13,10 @@ public class Model {
 	
 	public Model() {
 		YelpDAO dao = new YelpDAO() ;
+		
 		this.businessIdMap = new HashMap<>() ;
-		this.businesses = dao.readBusinesses(businessIdMap) ;
+		this.businesses = dao.readBusinesses(businessIdMap);
+		
 		
 		/* se il DAO non crea la IdMap, la posso creare nel model
 		for(Business b: this.businesses)
